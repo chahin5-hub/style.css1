@@ -1,153 +1,289 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <title>موقعي الشخصي</title>
+<meta charset="UTF-8">
+<title>مطور مواقع</title>
 
-  <!-- خط جميل -->
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;600&display=swap" rel="stylesheet">
+<style>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Cairo', sans-serif;
-      background: #0f172a;
-      color: white;
-    }
+/* عام */
+body {
+  margin: 0;
+  font-family: Arial;
+  background: #0f172a;
+  color: white;
+  transition: 0.3s;
+}
 
-    header {
-      padding: 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background: #020617;
-    }
+.light {
+  background: #f1f5f9;
+  color: black;
+}
 
-    header h1 {
-      color: #38bdf8;
-    }
+/* Navbar */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  background: #020617;
+  padding: 15px;
+}
 
-    nav a {
-      color: white;
-      margin: 10px;
-      text-decoration: none;
-    }
+nav a {
+  color: white;
+  text-decoration: none;
+}
 
-    .hero {
-      text-align: center;
-      padding: 100px 20px;
-    }
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+}
 
-    .hero h2 {
-      font-size: 40px;
-    }
+/* Services */
+.services {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 30px;
+}
 
-    .hero span {
-      color: #38bdf8;
-    }
+.card {
+  background: #1e293b;
+  padding: 20px;
+  border-radius: 15px;
+  width: 200px;
+  transition: 0.3s;
+}
 
-    .btn {
-      background: #38bdf8;
-      padding: 10px 20px;
-      border-radius: 10px;
-      color: black;
-      text-decoration: none;
-      display: inline-block;
-      margin-top: 20px;
-    }
+.card:hover {
+  transform: translateY(-10px);
+}
 
-    .section {
-      padding: 60px 20px;
-      text-align: center;
-    }
+/* Pricing */
+.pricing {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px;
+}
 
-    .services {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
+.plan {
+  padding: 25px;
+  border-radius: 15px;
+  width: 230px;
+  text-align: center;
+  transition: 0.3s;
+}
 
-    .card {
-      background: #1e293b;
-      margin: 15px;
-      padding: 20px;
-      border-radius: 15px;
-      width: 250px;
-      transition: 0.3s;
-    }
+.plan:hover {
+  transform: translateY(-10px);
+}
 
-    .card:hover {
-      transform: scale(1.05);
-    }
+/* VIP */
+.vip {
+  background: linear-gradient(45deg, gold, orange);
+  color: black;
+  box-shadow: 0 0 30px gold;
+}
 
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: #020617;
-    }
-  </style>
+.vip:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 60px gold;
+}
+
+/* Pro */
+.pro {
+  background: linear-gradient(45deg, #2563eb, #38bdf8);
+}
+
+/* Basic */
+.basic {
+  background: linear-gradient(45deg, #065f46, #10b981);
+}
+
+/* Reviews */
+.reviews {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 30px;
+}
+
+.review {
+  background: #1e293b;
+  padding: 20px;
+  border-radius: 15px;
+  width: 220px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.review:hover {
+  transform: translateY(-10px);
+}
+
+.review img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+/* WhatsApp */
+.whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  padding: 15px;
+  border-radius: 50%;
+  text-decoration: none;
+  font-size: 22px;
+  box-shadow: 0 0 20px #25D366;
+  animation: pulse 1.5s infinite;
+  color: white;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+/* Cursor */
+.cursor {
+  width: 15px;
+  height: 15px;
+  background: cyan;
+  position: fixed;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+/* Programmer animation */
+.coder {
+  position: fixed;
+  bottom: 20px;
+  left: -150px;
+  animation: move 12s linear infinite;
+}
+
+.coder img {
+  width: 100px;
+}
+
+@keyframes move {
+  0% { left: -150px; }
+  50% { left: 50%; transform: translateX(-50%); }
+  100% { left: 110%; }
+}
+
+button {
+  padding: 10px;
+  cursor: pointer;
+}
+
+</style>
 </head>
 
 <body>
 
-<header>
-  <h1>شـاهين</h1>
-  <nav>
-    <a href="#about">من أنا</a>
-    <a href="#services">خدماتي</a>
-    <a href="#contact">تواصل</a>
-  </nav>
-</header>
+<nav>
+  <a href="#">الرئيسية</a>
+  <a href="portfolio.html">أعمالي</a>
+  <button onclick="toggleMode()">🌙</button>
+</nav>
 
 <section class="hero">
-  <h2>أنا <span>مطور مواقع</span></h2>
-  <p>أقوم بإنشاء مواقع احترافية ومتاجر إلكترونية</p>
-  <a class="btn" href="#contact">اطلب خدمة</a>
+  <h1>أصمم مواقع تجلب لك عملاء 💰</h1>
+  <p>مطور مواقع أساعدك في إنشاء موقع أو متجر احترافي</p>
 </section>
 
-<section id="about" class="section">
-  <h2>من أنا</h2>
-  <p>
-    أنا مطور مواقع متخصص في تصميم وتطوير مواقع حديثة وسريعة.
-    أساعد الأشخاص والشركات في بناء مواقع احترافية لعرض أعمالهم أو بيع منتجاتهم.
-  </p>
-</section>
+<h2 style="text-align:center;">خدماتي 💼</h2>
+<div class="services">
+  <div class="card">تطوير مواقع ⚡</div>
+  <div class="card">متاجر إلكترونية 🛒</div>
+  <div class="card">تصميم احترافي 🎨</div>
+</div>
 
-<section id="services" class="section">
-  <h2>خدماتي</h2>
+<h2 style="text-align:center;">الباقات 💰</h2>
+<div class="pricing">
 
-  <div class="services">
-    <div class="card">
-      <h3>تصميم مواقع</h3>
-      <p>تصميم مواقع جميلة ومتجاوبة مع جميع الأجهزة</p>
-    </div>
-
-    <div class="card">
-      <h3>متاجر إلكترونية</h3>
-      <p>إنشاء متجر كامل مع نظام دفع وطلبات</p>
-    </div>
-
-    <div class="card">
-      <h3>تطوير مواقع</h3>
-      <p>برمجة مواقع احترافية وسريعة</p>
-    </div>
+  <div class="plan basic">
+    <h3>عادية 🚀</h3>
+    <p><b>100$</b></p>
+    <p>✔ صفحة واحدة</p>
+    <p>✔ تصميم بسيط</p>
+    <button>اطلب الآن</button>
   </div>
 
-</section>
+  <div class="plan pro">
+    <h3>احترافية 💎</h3>
+    <p><b>250$</b></p>
+    <p>✔ 3 صفحات</p>
+    <p>✔ تصميم حديث</p>
+    <p>✔ SEO</p>
+    <button>اطلب الآن</button>
+  </div>
 
-<section id="contact" class="section">
-  <h2>تواصل معي</h2>
+  <div class="plan vip">
+    <h3>VIP 👑</h3>
+    <p><b>500$</b></p>
+    <p>🔥 موقع كامل</p>
+    <p>🔥 متجر إلكتروني</p>
+    <p>🔥 دعم خاص</p>
+    <button>اطلب الآن</button>
+  </div>
 
-  <p>اضغط للتواصل عبر واتساب:</p>
+</div>
 
-  <a class="btn" href="https://wa.me/213XXXXXXXXX" target="_blank">
-    واتساب
-  </a>
-</section>
+<h2 style="text-align:center;">آراء العملاء ⭐</h2>
+<div class="reviews">
 
-<footer>
-  <p>© 2026 جميع الحقوق محفوظة</p>
-</footer>
+  <div class="review">
+    <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c">
+    <p>⭐⭐⭐⭐⭐</p>
+    <p>خدمة ممتازة وسريعة</p>
+  </div>
+
+  <div class="review">
+    <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c">
+    <p>⭐⭐⭐⭐⭐</p>
+    <p>تصميم رائع جداً</p>
+  </div>
+
+  <div class="review">
+    <img src="https://images.unsplash.com/photo-1537432376769-00a3c2c7f7c7">
+    <p>⭐⭐⭐⭐⭐</p>
+    <p>مبرمج محترف 🔥</p>
+  </div>
+
+</div>
+
+<!-- WhatsApp -->
+<a class="whatsapp" href="https://wa.me/213000000000">💬</a>
+
+<!-- Cursor -->
+<div class="cursor" id="cursor"></div>
+
+<!-- Programmer -->
+<div class="coder">
+  <img src="https://cdn-icons-png.flaticon.com/512/4712/4712109.png">
+</div>
+
+<script>
+
+function toggleMode(){
+  document.body.classList.toggle("light");
+}
+
+document.addEventListener("mousemove", e=>{
+  let c = document.getElementById("cursor");
+  c.style.left = e.clientX + "px";
+  c.style.top = e.clientY + "px";
+});
+
+</script>
 
 </body>
 </html>
