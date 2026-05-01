@@ -1,53 +1,26 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<title>موقعي الاحترافي</title>
+<title>متجري</title>
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<h1>🚀 موقعي</h1>
+<nav>
+<a href="index.html">الرئيسية</a>
+<a href="shop.html">المتجر</a>
+<a href="cart.html">السلة</a>
+<a href="about.html">من نحن</a>
+<a href="contact.html">اتصل</a>
+</nav>
 
-<input id="user" placeholder="اسم المستخدم">
-<input id="pass" placeholder="كلمة المرور">
-<button onclick="register()">تسجيل</button>
-<button onclick="login()">دخول</button>
-
-<h2>📡 بيانات من السيرفر</h2>
-<button onclick="getData()">تحميل</button>
-<p id="data"></p>
-
-<script>
-async function register(){
-  await fetch("http://localhost:3000/register",{
-    method:"POST",
-    headers:{"Content-Type":"application/json"},
-    body:JSON.stringify({
-      username: user.value,
-      password: pass.value
-    })
-  });
-  alert("تم التسجيل");
-}
-
-async function login(){
-  const res = await fetch("http://localhost:3000/login",{
-    method:"POST",
-    headers:{"Content-Type":"application/json"},
-    body:JSON.stringify({
-      username: user.value,
-      password: pass.value
-    })
-  });
-  alert(await res.text());
-}
-
-async function getData(){
-  const res = await fetch("http://localhost:3000/api/data");
-  const data = await res.json();
-  document.getElementById("data").innerText = data.message;
-}
-</script>
+<header>
+<h1>🛒 مرحبا بك في متجرنا</h1>
+<p>أفضل المنتجات بأفضل الأسعار</p>
+<a href="shop.html" class="btn">تسوق الآن</a>
+</header>
 
 </body>
 </html>
