@@ -1,25 +1,213 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<title>الرئيسية</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>موقعي الشخصي</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;600&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Cairo', sans-serif;
+      background: #0f172a;
+      color: white;
+    }
+
+    header {
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      background: #020617;
+    }
+
+    nav a {
+      color: white;
+      margin: 10px;
+      text-decoration: none;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 100px 20px;
+    }
+
+    .hero span {
+      color: #38bdf8;
+    }
+
+    .btn {
+      background: #38bdf8;
+      padding: 10px 20px;
+      border-radius: 10px;
+      color: black;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 15px;
+    }
+
+    .section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .services {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .card {
+      background: #1e293b;
+      margin: 15px;
+      padding: 20px;
+      border-radius: 15px;
+      width: 260px;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    ul li {
+      margin: 10px 0;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #020617;
+    }
+  </style>
 </head>
+
 <body>
 
-<nav>
-<a href="index.html">الرئيسية</a>
-<a href="shop.html">المتجر</a>
-<a href="cart.html">السلة</a>
-<a href="about.html">من نحن</a>
-<a href="contact.html">اتصل</a>
-</nav>
+<header>
+  <h2>شـاهين</h2>
+  <nav>
+    <a href="#about">من أنا</a>
+    <a href="#services">خدماتي</a>
+    <a href="#pricing">الباقات</a>
+    <a href="#reviews">التقييمات</a>
+    <a href="#contact">تواصل</a>
+  </nav>
+</header>
 
-<div class="container">
-<h1>🛒 مرحبا بكم في متجرنا</h1>
-<p>أفضل المنتجات بأفضل الأسعار</p>
-<a href="shop.html"><button>تسوق الآن</button></a>
-</div>
+<section class="hero">
+  <h1>أنا <span>مطور مواقع</span></h1>
+  <p>أبني مواقع احترافية ومتاجر إلكترونية</p>
+  <a class="btn" href="#contact">اطلب خدمة</a>
+</section>
 
-</body>
-</html>
+<section id="about" class="section">
+  <h2>من أنا</h2>
+  <p>أنا مطور مواقع أساعدك في إنشاء موقع أو متجر احترافي لعملك.</p>
+</section>
+
+<section id="services" class="section">
+  <h2>خدماتي</h2>
+
+  <div class="services">
+    <div class="card">
+      <h3>تصميم مواقع</h3>
+      <p>تصميم عصري وجذاب</p>
+    </div>
+
+    <div class="card">
+      <h3>متاجر إلكترونية</h3>
+      <p>متجر كامل مع طلبات ودفع</p>
+    </div>
+
+    <div class="card">
+      <h3>تطوير مواقع</h3>
+      <p>سرعة وأداء عالي</p>
+    </div>
+  </div>
+</section>
+
+<!-- 🛒 الباقات -->
+<section id="pricing" class="section">
+  <h2>الباقات</h2>
+
+  <div class="services">
+
+    <div class="card">
+      <h3>الباقة الأساسية</h3>
+      <h2>50$</h2>
+      <ul>
+        <li>صفحة واحدة</li>
+        <li>تصميم بسيط</li>
+        <li>متجاوب</li>
+      </ul>
+      <a class="btn" href="#contact">اطلب الآن</a>
+    </div>
+
+    <div class="card" style="border:2px solid #38bdf8;">
+      <h3>الباقة المتقدمة</h3>
+      <h2>150$</h2>
+      <ul>
+        <li>3 صفحات</li>
+        <li>تصميم احترافي</li>
+        <li>SEO</li>
+      </ul>
+      <a class="btn" href="#contact">اطلب الآن</a>
+    </div>
+
+    <div class="card">
+      <h3>الباقة الاحترافية</h3>
+      <h2>300$</h2>
+      <ul>
+        <li>موقع كامل</li>
+        <li>متجر إلكتروني</li>
+        <li>لوحة تحكم</li>
+      </ul>
+      <a class="btn" href="#contact">اطلب الآن</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ⭐ التقييمات -->
+<section id="reviews" class="section">
+  <h2>آراء العملاء</h2>
+
+  <div class="services">
+
+    <div class="card">
+      <p>⭐⭐⭐⭐⭐</p>
+      <p>خدمة رائعة وسريعة!</p>
+      <strong>- أحمد</strong>
+    </div>
+
+    <div class="card">
+      <p>⭐⭐⭐⭐⭐</p>
+      <p>أفضل مما توقعت 🔥</p>
+      <strong>- سارة</strong>
+    </div>
+
+    <div class="card">
+      <p>⭐⭐⭐⭐</p>
+      <p>تعامل ممتاز</p>
+      <strong>- يوسف</strong>
+    </div>
+
+  </div>
+</section>
+
+<section id="contact" class="section">
+  <h2>تواصل معي</h2>
+  <a class="btn" href="https://wa.me/213XXXXXXXXX" target="_blank">
+    واتساب
+  </a>
+</section>
+
+<footer>
+  <p>© 2026 جميع الحقوق محفوظة</p>
+</footer>
