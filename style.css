@@ -1,9 +1,10 @@
+
 body{
+margin:0;
 font-family:Arial;
 background:#0f172a;
 color:white;
 text-align:center;
-margin:0;
 }
 
 nav{
@@ -17,14 +18,29 @@ margin:10px;
 text-decoration:none;
 }
 
-header{
-padding:80px;
+.container{
+padding:40px;
 }
 
-.btn{
+.products{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:20px;
+}
+
+.card{
+background:#1e293b;
+padding:20px;
+border-radius:15px;
+width:220px;
+}
+
+button{
 background:#22c55e;
-padding:10px 20px;
+border:none;
+padding:10px;
 border-radius:10px;
 color:white;
-text-decoration:none;
+cursor:pointer;
 }
